@@ -11,7 +11,7 @@ use Ratchet\WebSocket\WsServer;
 require_once 'vendor/autoload.php';
 
 $chatComponent = new class implements MessageComponentInterface {
-    private Set $connections;
+    private SplObjectStorage $connections;
 
     public function __construct()
     {
